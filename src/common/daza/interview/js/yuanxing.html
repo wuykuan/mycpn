@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /**
+    原型：每个函数都有一个 prototype 属性
+    原型链：js查询属性过程中，自己身上没有就往原型上找，直到顶端Object，终止为null
+ */
+ function Person() {
+
+}
+Person.prototype.name = 'Kevin';
+var person1 = new Person();
+var person2 = new Person();
+console.log(person1.name) // Kevin
+console.log(person2.name) // Kevin
+</script>
+</body>
+</html>

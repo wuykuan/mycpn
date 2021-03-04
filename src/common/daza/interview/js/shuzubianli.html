@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /***
+         * foreach: arr.foreach(item, index,arr)
+         * filter: filter((item,index,arr),返回添加为真的item
+         * map:这个map方法主要对数组的复杂逻辑处理时用的多，特别是react中遍历数据，也经常用到，写法和forEach类似
+         * some:这个some方法用于只要数组中至少存在一个满足条件的结果，返回值就为true,否则返回fasel, 写法和forEach类似
+         * every:这个every方法用于数组中每一项都得满足条件时，才返回true，否则返回false, 写法和forEach类似
+        */
+
+
+    //     let arr = ["jdj", 2, 3]
+    //    let a = arr.forEach(
+    //         (item, index, arr) => {
+    //             console.log(item, index, arr);
+    //         }
+    //     )
+
+    // let arrInfo=[4,16,6,8,45,7,87]
+ 
+    // let newarr = arrInfo.filter(
+    //     item => {
+    //       return  item > 8
+    //     }
+    // )
+    // console.log(newarr);
+        let arrInfo = [4,16,6,8,45,7,87]
+
+      let newarr =    arrInfo.map(
+            item => {
+                return `<li> ${item} </li>`  //jsx玩法
+            }
+        )
+        console.log(newarr);
+    </script>
+</body>
+</html>

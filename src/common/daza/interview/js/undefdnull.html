@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /**
+        历史原因：原来，这与JavaScript的历史有关。1995年JavaScript诞生时，
+        最初像Java一样，只设置了null作为表示"无"的值。
+        根据C语言的传统，null被设计成可以自动转为0。
+        总结：js作者借鉴java 的null表示无的值，null会转化为0，在java里null为一个对象，但是js数据类型
+        分为原始类型和合成类型，作者想表示无的值最好不是对象，再次JavaScript的最初版本没有包括错误处理机制，
+        发生数据类型不匹配时，往往是自动转换类型或者默默地失败。Brendan Eich觉得，如果null自动转为0，很不容易发现错误。
+        从而有设计了undefined
+ */
+let a = undefined
+let b = null
+// console.log(1 + a);
+console.log(b  instanceof  null);
+//判断数组Array.isArray() 
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /**
+ * 答：闭包说的通俗一点就是打通了一条在函数外部访问函数内部作用域的通道。
+ * 正常情况下函数外部是访问不到函数内部作用域变量的，表象判断是不是闭包:函数嵌套函数,内部函数被return 
+ *  内部函数调用外层函数的局部变量
+优点：可以隔离作用域，不造成全局污染
+缺点：由于闭包长期驻留内存，则长期这样会导致内存泄露
+    如何解决内存泄露：将暴露全外部的闭包变量置为null
+    适用场景：封装组件，for循环和定时器结合使用,for循环和dom事件结合.可以在性能优化的过程中,
+    节流防抖函数的使用,导航栏获取下标的使用
+ */
+
+// function warp(){
+//     let str = "外部局部变量"
+//     return  function init(){
+//          console.log(str);
+//     }
+// }
+
+// let fn = warp()
+// fn()
+
+// function car(){
+//  var speed = 0
+//  function fn(){
+//  speed++
+//  console.log(speed)
+//  }
+//  return fn
+// }
+// var speedUp = car()
+// speedUp() //1
+// speedUp() //2
+
+let a = 1,b=2;
+a = a + b
+b = a - b
+a = a - b
+console.log(a,b);
+</script>
+</body>
+</html>
